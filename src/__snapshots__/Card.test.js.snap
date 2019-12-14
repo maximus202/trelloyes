@@ -13,3 +13,17 @@ exports[`Card component renders the UI as expected 1`] = `
   <p />
 </div>
 `;
+
+exports[`Card component test suite. renders the UI as expected 1`] = `
+<div
+  className="Card"
+>
+  <button
+    type="button"
+  >
+    delete
+  </button>
+  <h3 />
+  <p />
+</div>
+`;

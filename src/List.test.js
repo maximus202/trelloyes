@@ -1,19 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Card from './Card.js';
+import List from './List.js';
 import renderer from 'react-test-renderer';
 
-describe('Card component test suite.', () => {
-    it('Renders without crashing.', () => {
+describe('Test suite for List component.', () => {
+    it('Smoke test. Renders the component without crashing.', () => {
         const div = document.createElement('div');
-        ReactDOM.render(<Card />, div);
+        ReactDOM.render(<List />, div);
         ReactDOM.unmountComponentAtNode(div);
     });
-    it('renders the UI as expected', () => {
+    it('Snapshot test. Renders the component in the UI.', () => {
         const tree = renderer
-            .create(<Card />)
+            .Create(<List />)
             .toJSON()
         expect(tree).toMatchSnapshot();
     });
-
 });
